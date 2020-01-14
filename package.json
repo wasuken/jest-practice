@@ -5,7 +5,8 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint"
+		"lint": "vue-cli-service lint",
+		"test": "jest"
 	},
 	"jest": {
 		"moduleFileExtensions": [
@@ -14,10 +15,25 @@
 			"vue"
 		],
 		"transform": {
-			".*\\.(vue)$": "vue-jest"
-		}
+			"^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+			".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+		},
+		"moduleNameMapper": {
+			"^@/(.*)$": "<rootDir>/src/$1"
+		},
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"**/*.{js,vue}",
+			"!**/node_modules/**"
+		],
+		"coverageReporters": [
+			"html",
+			"text-summary"
+		]
 	},
 	"dependencies": {
+		"babel-core": "^6.26.3",
+		"babel-preset-env": "^1.7.0",
 		"core-js": "^3.4.4",
 		"vue": "^2.6.10"
 	},
