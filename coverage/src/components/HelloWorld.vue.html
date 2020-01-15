@@ -3,14 +3,14 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/App.vue</title>
+    <title>Code coverage report for src/components/HelloWorld.vue</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -18,7 +18,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> App.vue</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> HelloWorld.vue</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -68,7 +68,16 @@
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
 <a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -79,17 +88,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-	&lt;router-link to="/"&gt;Home&lt;/router-link&gt;
+	&lt;div class="count"&gt;
+		&lt;h1&gt;This is an count page&lt;/h1&gt;
+		{{$store.state.count}}
+		&lt;button @click="increment"&gt;+&lt;/button&gt;
+		&lt;button @click="decrement"&gt;-&lt;/button&gt;
+	&lt;/div&gt;
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
- import HelloWorld from './components/HelloWorld';
+ import { mapMutations } from "vuex";
  export default {
-	 components:{
-		 HelloWorld,
-	 },
+	 name: 'HelloWorld',
+	 methods: mapMutations(["increment", "decrement"]),
  };
 &lt;/script&gt;
 &nbsp;</pre></td></tr></table></pre>
@@ -102,14 +114,14 @@
                 at Wed Jan 15 2020 21:35:51 GMT+0900 (Japan Standard Time)
             </div>
         </div>
-        <script src="../prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     
